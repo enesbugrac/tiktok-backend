@@ -1,7 +1,7 @@
-const Videos = require("./dbModel.js");
-const data = require("./data.js");
-const express = require("express");
-const mongoose = require("mongoose");
+import express from "express";
+import Videos from "./dbModel.js";
+import data from "./data.js";
+import mongoose from "mongoose";
 
 //app config
 const app = express();
@@ -35,7 +35,7 @@ app.get("/v2/posts", (req, res) => {
     if (err) {
       res.status(500).send(err);
     } else {
-      res.status(200).send("sea");
+      res.status(200).send("  ");
     }
   });
 });
