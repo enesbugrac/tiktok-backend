@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
-const tiktokSchema = mongoose.Schema({
+const Schema = mongoose.Schema;
+
+const tiktokSchema = new Schema({
   url: String,
   channel: String,
   song: String,
@@ -10,4 +12,5 @@ const tiktokSchema = mongoose.Schema({
   shares: String,
 });
 
-module.exports = mongoose.model("tiktokVideos", tiktokSchema);
+const Videos = mongoose.model("tiktokVideos", tiktokSchema);
+module.exports = Videos;
