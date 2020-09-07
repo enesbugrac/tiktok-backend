@@ -1,7 +1,8 @@
-import express from "express";
-import mongoose from "mongoose";
-import data from "./data.js";
-import Videos from "./dbModel.js";
+const Videos = require("./dbModel.js");
+const data = require("./data.js");
+const express = require("express");
+const mongoose = require("mongoose");
+
 //app config
 const app = express();
 const port = process.env.PORT || 9000;
