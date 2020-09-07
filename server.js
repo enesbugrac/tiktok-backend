@@ -40,17 +40,5 @@ app.get("/v2/posts", (req, res) => {
   });
 });
 
-app.post("/v2/posts", (req, res) => {
-  const dbVideos = req.body;
-
-  Videos.create(dbVideos, (err, data) => {
-    if (err) {
-      res.status(500).send(err);
-    } else {
-      res.status(201).send(data);
-    }
-  });
-});
-
 //listen
 app.listen(port, () => console.log("listening on localhost" + port));
